@@ -1,0 +1,133 @@
+header{
+    width:100%;
+}
+
+header .topMenu{
+    width:100%; 
+    background:#fff; border-bottom:1px solid rgba(0,0,0,0.1);
+}
+header .topMenu .topMenuWrap{
+    height:48px; max-width:1200px; margin:0 auto; *zoom:1; padding:0 15px;
+}
+header .topMenu .topMenuWrap:after{
+    content:''; display:table; clear:both;
+}
+/* KOR, ENG */
+header .topMenu .topMenuWrap>ul{
+    float:left; margin-top:14px;
+}
+header .topMenu .topMenuWrap>ul>li{
+    float:left;
+}
+header .topMenu .topMenuWrap>ul>li>a{
+    display:block; height:20px; width:38px; padding-left:25px;
+    text-decoration:none; color:#444; font-weight:500; font-size:13px; line-height:20px;
+}
+header .topMenu .topMenuWrap>ul>li:first-child>a{
+    background:url('../img/layout/icon_ko_over.png') center left/auto 80% no-repeat;
+}
+header .topMenu .topMenuWrap>ul>li:last-child>a{
+    background:url('../img/layout/icon_en.png') center left/auto 80% no-repeat;
+}
+/* 우측 infoMenu  */
+header .topMenu .infoMenu{
+    float:right; margin-top:17px;
+}
+header .topMenu .infoMenu>li{
+    float:left; padding:0 10px; position:relative; height:16px;
+}
+header .topMenu .infoMenu>li:after{
+    content:''; display:block; width:1px; height:100%; position:absolute; top:0; right:0;
+    background:rgba(0,0,0,0.1);
+}
+header .topMenu .infoMenu>li:last-child:after{
+    display:none;
+}
+header .topMenu .infoMenu>li>a{
+    display:block; width:100%; height:16px;
+    color:#444; font-size:12px; text-decoration:none; font-weight:500;
+}
+header .topMenu .infoMenu>li:nth-child(4) img,
+header .topMenu .infoMenu>li:nth-child(5) img,
+header .topMenu .infoMenu>li:nth-child(6) img{
+    width:auto; height:16px; vertical-align: 0%;
+}
+/* 마이쇼핑 */
+header .topMenu .infoMenu>li:nth-child(5){
+    position:relative;
+}
+header .topMenu .infoMenu .myPagePopOver{
+    display:none; position:absolute; width:82px; height:149px; left:-21px; top:19px; padding-top:26px;
+    background:url('../img/layout/bg_dropdown_menu.png') no-repeat;
+}
+header .topMenu .infoMenu .myPagePopOver a{
+    display:block; text-align:center; padding:7px 0;
+    font-size:12px; color:#444;
+}
+/* 장바구니 */
+header .topMenu .infoMenu>li:nth-child(6)>a{
+    position:relative; display:block; width:33px; height:16px;
+}
+header .topMenu .infoMenu .shopNum{
+    position:absolute; right:0; top:0;width:14px; height:17px; text-align:center;
+    font-size:12px; line-height:17px; background:#cfcfcf; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;
+}
+
+/* 메인 메뉴바 */
+header .mainMenu{
+    width:100%; height:55px;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+header .mainMenuWrap{
+    *zoom:1; padding:0 15px; position:relative; max-width:1200px; margin:0 auto;
+}
+header .mainMenuWrap:after{
+    display:table; clear:both; content:'';
+}
+
+header .mainMenu .logo{
+    float:left;
+}
+.logo>a{
+    display:block; margin-top:6px;
+}
+.logo>a>img{
+    width:auto; height:40px;
+}
+
+header .mainMenu nav>ul{
+    *zoom:1; position:absolute; top:50%; left:50%; width:610px; height:16px;
+    transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+}
+header .mainMenu nav>ul:after{
+    clear:both; content:''; display:table;
+}
+header .mainMenu nav>ul>li{
+    float:left; padding:0 14px; position:relative;
+}
+header .mainMenu nav>ul>li>a{
+    text-decoration:none; font-size:14px; color:#444;
+}
+header .mainMenu nav>ul .subMenu{
+    position:absolute; top:45px; left:50%; width:100%;
+    transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+}
+header .mainMenu nav>ul .subMenu>li{
+    padding:8px 0;
+}
+header .mainMenu nav>ul .subMenu>li>a{
+    text-align:center; width:100%; display:block;
+    color:#666; font-size:12px;
+}
+
+header #navWhiteBg{
+    width:100%; height:220px;
+    background:#cfcfcf;
+}
+
+header .mainMenu .sns{
+    float:right; margin-top:18px;
+}
+header .mainMenu .sns>li{
+    float:left; padding:0 2px;
+}
