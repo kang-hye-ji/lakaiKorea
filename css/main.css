@@ -1,3 +1,36 @@
 @charset "utf-8";
 @import url('layout.css');
 @import url('base.css');
+
+.slide{ width:600px; margin:50px auto; }
+.slick-list{ /* overflow:hidden; */ width:100%; }
+.slick-track{ z-index:80; }
+.slick-slide{ float:left; }
+
+body{
+    width:100%; overflow-x:hidden;
+}
+.container{
+    padding-top:105px; max-width:1200px; margin:0 auto; width:100%;
+}
+
+.visualSl{
+    width:100%; height:500px; position:relative; z-index:80;
+}
+.visualSl .slick-slide{
+    width:100%; height:500px; position:relative; z-index:80;
+}
+.visualSl .slick-slide>a{
+    display:block; height:100%; width:100%; position:relative; z-index:50;
+}
+.visualSl .slick-slide>a>img{
+    display:block; width:auto; height:500px; position:absolute; top:0; left:50%; z-index:50;
+    transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+}
+
+.visualSl .slick-arrow{
+    display:block; position:absolute; top:0; left:0; z-index:90;
+}
+.visualSl .slick-dots{
+    display:block; position:absolute; top:0; left:0; z-index:90;
+}

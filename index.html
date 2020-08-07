@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&display=swap" rel="stylesheet">
         
+        <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <!--[if lt IE 9]>
@@ -27,7 +28,22 @@
                             <li><a href="#" target="_self">로그인</a></li>
                             <li><a href="#" target="_self">회원가입</a></li>
                             <li><a href="#" target="_self">주문조회</a></li>
-                            <li><button type="button"><img alt="검색" src="img/layout/searchBtn.png"/></button></li>
+                            <li>
+                                <button type="button"><img alt="검색" src="img/layout/searchBtn.png"/></button>
+                                <div class="searchView">
+                                    <form>
+                                        <div class="searchBar">
+                                            <input type="search" placeholder="독도팔찌"/>
+                                            <button>
+                                                <img alt="검색" src="img/layout/search_button2.png"/>
+                                            </button>
+                                        </div>
+                                        <button class="closeBtn">
+                                            <img src="img/layout/close_button.png" alt="닫기"/>
+                                        </button>
+                                    </form>
+                                </div>
+                            </li>
                             <li>
                                 <a href="#" target="_self"><img alt="마이쇼핑" src="img/layout/myPageBtn.png"/></a>
                                 <ul class="myPagePopOver">
@@ -66,7 +82,10 @@
                                         <li><a href="#" target="_self">ETC</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#" target="_self">UPCYCLE</a></li>
+                                <li>
+                                    <a href="#" target="_self">UPCYCLE</a>
+                                    <ul class="subMenu"></ul>
+                                </li>
                                 <li>
                                     <a href="#" target="_self">CUSTOMIZE</a>
                                     <ul class="subMenu">
@@ -88,7 +107,10 @@
                                         <li><a href="#" target="_self">뉴스</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#" target="_self">EVENT</a></li>
+                                <li>
+                                    <a href="#" target="_self">EVENT</a>
+                                    <ul class="subMenu"></ul>
+                                </li>
                                 <li>
                                     <a href="#" target="_self">COMMUNITY</a>
                                     <ul class="subMenu">
@@ -130,10 +152,18 @@
         <div class="container">
             <div class="visual">
                 <div class="visualSl">
-                    <a href="#" target="_self">1<img alt="" src="#"/></a>
-                    <a href="#" target="_self">2<img alt="" src="#"/></a>
-                    <a href="#" target="_self">3<img alt="" src="#"/></a>
-                    <a href="#" target="_self">4<img alt="" src="#"/></a>
+                    <div class="visualSl-1">
+                        <a href="#" target="_self"><img alt="" src="img/main/slider02.jpg"/></a>
+                    </div>
+                    <div class="visualSl-2">
+                        <a href="#" target="_self"><img alt="" src="img/main/slider10.jpg"/></a>
+                    </div>
+                    <div class="visualSl-3">
+                        <a href="#" target="_self"><img alt="" src="img/main/slider12.jpg"/></a>
+                    </div>
+                    <div class="visualSl-4">
+                        <a href="#" target="_self"><img alt="" src="img/main/slider14.jpg"/></a>
+                    </div>
                 </div>
             </div>
             <div class="UPCYCLE">
@@ -153,10 +183,116 @@
             </div>
         </div>
         <footer>
-
+            <ul class="footerInner">
+                <li>
+                    <h1 class="footerLogo">
+                        <img alt="라카이 코리아" src="img/layout/lakaiLogo.png"/>
+                    </h1>
+                    <ol>
+                        <li>서울특별시 금천구 가산디지털1로 25</li>
+                        <li>www.lakaikorea.co.kr</li>
+                        <li>고객 문의 : lakaikoreacs@naver.com</li>
+                        <li>사업 제안 : lakai_official@naver.com</li>
+                        <li>1577-6913</li>
+                    </ol>
+                </li>
+                <li>
+                    <ol class="guide">
+                        <li><a href="#" target="_self">약관보기</a></li>
+                        <li><a href="#" target="_self">개인정보 취급방침</a></li>
+                    </ol>
+                    <address>
+                        <ol>
+                            <li>
+                                <span>법인명(상호) : 주식회사 라카이코리아</span>
+                                <span>대표자(성명) : 신정헌</span>
+                                <span>사업자 등록번호 안내 : 720-81-00985</span>
+                            </li>
+                            <li>
+                                <span>통신판매업 신고 : 제 2019-서울금천-0636 호 [사업자정보확인}]</span>
+                            </li>
+                            <li>
+                                <span>전화 : 1577-6913</span>
+                                <span>팩스 : 02-3402-7487</span>
+                                <span>개인정보관리책임자 : 신정헌 (lakai_official@naver.com)</span>
+                            </li>
+                            <li>
+                                <span>서울특별시 금천구 가산디지털1로 25 806호,807호(대륭테크노타운 17차)</span>
+                            </li>
+                            <li>
+                                <span>고객 문의 : lakaikoreacs@naver.com</span>
+                            </li>
+                            <li>
+                                <span>업무 제휴 및 비지니스 문의 : lakai_official@naver.com</span>
+                            </li>
+                            <li>
+                                <span>Contact LAKAI for more information</span>
+                            </li>
+                        </ol>
+                    </address>
+                </li>
+                <li>
+                    <ol class="">
+                        <li><img alt="SGI 서울보증" src="img/layout/img01"/></li>
+                        <li><img alt="KSNET" src="img/layout/img03"/></li>
+                        <li><img alt="공정거래위원회" src="img/layout/img04"/></li>
+                    </ol>
+                    <dl>
+                        <dt><img alt="우리은행 에스크로" src="img/layout/img02.jpg"/></dt>
+                        <dd>고객님은 현금 등으로 10만원 이상 결제시,<br/>우리은행 구매안전 서비스를 이용하실 수 있습니다.</dd>
+                    </dl>
+                </li>
+            </ul>
         </footer>
     </body>
     <script type="text/javascript">
-        $('.visualSl').slick();
+        $('.visualSl').slick({
+            dots:true,
+            autoplay:true,
+            fade:true
+        });
+        
+        var infoMenu=document.getElementsByClassName('infoMenu')[0];
+        //검색
+        var searchBtn=infoMenu.getElementsByTagName('li')[3].getElementsByTagName('button')[0];
+        var searchView=infoMenu.getElementsByClassName('searchView')[0];
+        var searchCloseBtn=searchView.getElementsByClassName('closeBtn')[0];
+        searchBtn.onclick=function(){
+            searchView.style.display='block';
+        }
+        searchCloseBtn.onclick=function(){
+            searchView.style.display='none';
+        }
+        // 마이쇼핑
+        var infoMenu_myShop_li=infoMenu.getElementsByTagName('li')[4];
+        var infoMenu_myShop_btn=infoMenu_myShop_li.getElementsByTagName('a')[0];
+        var myPagePopOver=infoMenu_myShop_li.getElementsByClassName('myPagePopOver')[0];
+        infoMenu_myShop_btn.onmouseover=function(){
+            myPagePopOver.className='myPagePopOver open';
+        }
+        myPagePopOver.onmouseleave=function(){
+            myPagePopOver.className='myPagePopOver close';
+        }
+
+        //메인메뉴
+        $('.mainMenu nav>ul>li>a').on('mouseover', function(){
+            $('#navWhiteBg').removeClass('close');
+            $('.mainMenu nav .subMenu').removeClass('close');
+            $('#navWhiteBg').addClass('open');
+            $('.mainMenu nav .subMenu').addClass('open');
+            $('.mainMenu nav>ul>li>a').removeClass('on');
+            $(this).addClass('on');
+        })
+        $('.mainMenu').on('mouseleave',function(){
+            $('#navWhiteBg').removeClass('open');
+            $('.mainMenu nav .subMenu').removeClass('open');
+            $('#navWhiteBg').addClass('close');
+            $('.mainMenu nav .subMenu').addClass('close');
+            $('.mainMenu nav>ul>li>a').removeClass('on');
+        })
+        $('.mainMenu nav .subMenu').on('mouseover', function(){
+            $('.mainMenu nav>ul>li>a').removeClass('on');
+            $(this).siblings().addClass('on');
+        })
     </script>
 </html>

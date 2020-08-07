@@ -1,10 +1,13 @@
+/* keyframes, animation 크로스브라우징 체크 */
+
 header{
-    width:100%;
+    width:100%; position:fixed; top:0; z-index:100;
+    background:#fff;
 }
 
 header .topMenu{
     width:100%; 
-    background:#fff; border-bottom:1px solid rgba(0,0,0,0.1);
+    border-bottom:1px solid rgba(0,0,0,0.1);
 }
 header .topMenu .topMenuWrap{
     height:48px; max-width:1200px; margin:0 auto; *zoom:1; padding:0 15px;
@@ -21,7 +24,7 @@ header .topMenu .topMenuWrap>ul>li{
 }
 header .topMenu .topMenuWrap>ul>li>a{
     display:block; height:20px; width:38px; padding-left:25px;
-    text-decoration:none; color:#444; font-weight:500; font-size:13px; line-height:20px;
+    text-decoration:none; color:#3c4447; font-weight:500; font-size:13px; line-height:20px;
 }
 header .topMenu .topMenuWrap>ul>li:first-child>a{
     background:url('../img/layout/icon_ko_over.png') center left/auto 80% no-repeat;
@@ -45,24 +48,84 @@ header .topMenu .infoMenu>li:last-child:after{
 }
 header .topMenu .infoMenu>li>a{
     display:block; width:100%; height:16px;
-    color:#444; font-size:12px; text-decoration:none; font-weight:500;
+    color:#3c4447; font-size:12px; /* text-decoration:none; */ font-weight:500;
+}
+header .topMenu .infoMenu>li>a:hover{
+    font-weight:600;
 }
 header .topMenu .infoMenu>li:nth-child(4) img,
 header .topMenu .infoMenu>li:nth-child(5) img,
 header .topMenu .infoMenu>li:nth-child(6) img{
     width:auto; height:16px; vertical-align: 0%;
 }
+/* 검색창 */
+header .topMenu .infoMenu .searchView{
+    display:none; position:fixed; width:100%; height:100%; z-index:1010; top:0; left:0;
+    background:rgba(255,255,255,0.5);
+}
+header .topMenu .infoMenu .searchView form{
+    position:absolute; top:43%; left:50%; *zoom:1; width:570px;
+    transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);
+}
+header .topMenu .infoMenu .searchView form:after{
+    clear:both; content:''; display:table;
+}
+header .topMenu .infoMenu .searchView form .searchBar{
+    position:relative; float:left;
+}
+header .topMenu .infoMenu .searchView form .searchBar>input{
+    width:510px; height:50px; padding:0 45px 0 11px;
+    font-size:19px; color:#333; background:transparent; border:none; border-bottom:3px solid #000;
+}
+header .topMenu .infoMenu .searchView form .searchBar>button{
+    position:absolute; right:5px; top:9px; display:block; width:30px; height:30px;
+}
+header .topMenu .infoMenu .searchView form .searchBar>button>img{
+    width:100%; height:auto;
+}
+header .topMenu .infoMenu .searchView form .closeBtn{
+    float:right; display:block; width:35px; height:35px; margin-top:9px;
+}
+header .topMenu .infoMenu .searchView form .closeBtn>img{
+    width:100%; height:100%;
+}
 /* 마이쇼핑 */
 header .topMenu .infoMenu>li:nth-child(5){
     position:relative;
 }
 header .topMenu .infoMenu .myPagePopOver{
-    display:none; position:absolute; width:82px; height:149px; left:-21px; top:19px; padding-top:26px;
+    display:none; position:absolute; width:82px; height:123px; left:-21px; top:19px; padding-top:26px; z-index:1000;
     background:url('../img/layout/bg_dropdown_menu.png') no-repeat;
+}
+header .topMenu .infoMenu .myPagePopOver>li:hover{
+    background:#cfcfcf;
 }
 header .topMenu .infoMenu .myPagePopOver a{
     display:block; text-align:center; padding:7px 0;
-    font-size:12px; color:#444;
+    font-size:12px; color:#3c4447;
+}
+
+header .topMenu .infoMenu .myPagePopOver.open{
+    display:block; 
+    animation:myPagePopOver 0.5s ease 0s;
+    -webkit-animation:myPagePopOver 0.5s ease 0s;
+    -ms-animation:myPagePopOver 0.5s ease 0s;
+    -o-animation:myPagePopOver 0.5s ease 0s;
+    -moz-animation:myPagePopOver 0.5s ease 0s;
+}
+
+@keyframes myPagePopOver{
+    from{
+        opacity:0;
+        transform:translateY(-5%); -webkit-transform:translateY(-5%); -ms-transform:translateY(-5%); 
+    }
+    to{
+        opacity:1;
+        transform:translateY(0%); -webkit-transform:translateY(0%); -ms-transform:translateY(0%);
+    }
+}
+header .topMenu .infoMenu .myPagePopOver.close{
+    display:none;
 }
 /* 장바구니 */
 header .topMenu .infoMenu>li:nth-child(6)>a{
@@ -77,6 +140,7 @@ header .topMenu .infoMenu .shopNum{
 header .mainMenu{
     width:100%; height:55px;
     border-bottom:1px solid rgba(0,0,0,0.1);
+    box-shadow:0px 6px 5px -2px rgba(0,0,0,0.1); -webkit-box-shadow:0px 6px 5px -2px rgba(0,0,0,0.1);
 }
 header .mainMenuWrap{
     *zoom:1; padding:0 15px; position:relative; max-width:1200px; margin:0 auto;
@@ -103,14 +167,38 @@ header .mainMenu nav>ul:after{
     clear:both; content:''; display:table;
 }
 header .mainMenu nav>ul>li{
-    float:left; padding:0 14px; position:relative;
+    float:left; /* padding:0 14px; */ position:relative;
 }
 header .mainMenu nav>ul>li>a{
-    text-decoration:none; font-size:14px; color:#444;
+    text-align:center; position:relative;
+    text-decoration:none; font-size:14px; color:#3c4447;padding:0 14px;
 }
-header .mainMenu nav>ul .subMenu{
-    position:absolute; top:45px; left:50%; width:100%;
+header .mainMenu nav>ul>li>a.on{
+    color:#d03c4a;
+}
+header .mainMenu nav>ul>li>a.on:after{
+    content:''; display:block; width:18px; height:18px; position:absolute; 
+    top:-4px; left:0px;
+    background:url('../img/layout/flower1.png') no-repeat; background-size:100% 100%;
+    /* transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%); */
+}
+/* header .mainMenu nav>ul>li>a:hover:after{
+    content:''; display:block; width:5px; height:5px; position:absolute; top:-5px; left:50%;
+    background:#d03c4a; 
+    border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;
     transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+} */
+header .mainMenu nav>ul .subMenu{
+    display:none; position:absolute; top:33px; left:50%; width:100%; padding-top:10px; height:210px; z-index:110;
+    transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+}
+header .mainMenu nav>ul .subMenu.open{
+    display:block;
+    animation:openSubMenu 0.5s ease 0s;
+    -webkit-animation:openSubMenu 0.5s ease 0s;
+    -ms-animation:openSubMenu 0.5s ease 0s;
+    -o-animation:openSubMenu 0.5s ease 0s;
+    -moz-animation:openSubMenu 0.5s ease 0s;
 }
 header .mainMenu nav>ul .subMenu>li{
     padding:8px 0;
@@ -119,10 +207,29 @@ header .mainMenu nav>ul .subMenu>li>a{
     text-align:center; width:100%; display:block;
     color:#666; font-size:12px;
 }
+header .mainMenu nav>ul .subMenu>li>a:hover{
+    color:#e3a4ac;
+}
 
 header #navWhiteBg{
-    width:100%; height:220px;
+    display:none; width:100%; height:220px; /* position:relative; */ z-index:105;
     background:#cfcfcf;
+}
+header #navWhiteBg.open{
+    display:block;
+    animation:openSubMenu 0.5s ease 0s;
+    -webkit-animation:openSubMenu 0.5s ease 0s;
+    -ms-animation:openSubMenu 0.5s ease 0s;
+    -o-animation:openSubMenu 0.5s ease 0s;
+    -moz-animation:openSubMenu 0.5s ease 0s;
+}
+@keyframes openSubMenu{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1; 
+    }
 }
 
 header .mainMenu .sns{
@@ -130,4 +237,8 @@ header .mainMenu .sns{
 }
 header .mainMenu .sns>li{
     float:left; padding:0 2px;
+}
+
+footer{
+    width:100%;
 }
