@@ -5,11 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>라카이 코리아</title>
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="css/coin-slider-styles.css" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&display=swap" rel="stylesheet">
         
         <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="js/coin-slider.js"></script>
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -166,19 +168,33 @@
                     </div>
                 </div>
             </div>
-            <div class="UPCYCLE">
-
+            <div class="upcycle">
+                <div class="upcycleWrap">
+                    <h2>UPCYCLE PROJECT</h2>
+                    <h3>‘새신줄게 헌신다오’<br/>I’ll give you new shoes Give me used shoes.</h3>
+                    <p>업싸이클 프로젝트에 등록되는 상품들은 ‘새신줄게 헌신다오’ 기획에 의해 <br/> 리폼된 only one 커스텀 제품입니다.<br/>
+                        수익금의 일부는 사회의 도움을 필요로 하는 곳에 기부됩니다.</p>
+                    <a target="_self" title="UPCYCLE 자세히보기" href="#"></a>
+                </div>
             </div>
             <div class="EVENT">
 
             </div>
             <div class="customize">
-                <div class="customText">
-                    <h2>Fashion doesn't repeat it self.</h2>
-                    <p>When I wear clothes and shoes, it becomes fashion.</p>
+                <div class="customizeBg">
+                    <img src="img/main/second1.jpg" alt="커스텀패션"/>
                 </div>
-                <div class="customSl">
-
+                <div class="customizeContWrap">
+                    <div class="customText">
+                        <h2>Fashion doesn't repeat it self.</h2>
+                        <p>When I wear clothes and shoes, it becomes fashion.</p>
+                    </div>
+                    <div class="customSl" id="coin-slider">
+                        <a href="#" target="_self"><img src="img/main/minislider01.jpg" alt="1"/></a>
+                        <a href="#" target="_self"><img src="img/main/minislider02.jpg" alt="1"/></a>
+                        <a href="#" target="_self"><img src="img/main/minislider03.jpg" alt="1"/></a>
+                        <a href="#" target="_self"><img src="img/main/minislider04.jpg" alt="1"/></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,50 +213,52 @@
                     </ol>
                 </li>
                 <li>
-                    <ol class="guide">
-                        <li><a href="#" target="_self">약관보기</a></li>
-                        <li><a href="#" target="_self">개인정보 취급방침</a></li>
-                    </ol>
-                    <address>
-                        <ol>
-                            <li>
-                                <span>법인명(상호) : 주식회사 라카이코리아</span>
-                                <span>대표자(성명) : 신정헌</span>
-                                <span>사업자 등록번호 안내 : 720-81-00985</span>
-                            </li>
-                            <li>
-                                <span>통신판매업 신고 : 제 2019-서울금천-0636 호 [사업자정보확인}]</span>
-                            </li>
-                            <li>
-                                <span>전화 : 1577-6913</span>
-                                <span>팩스 : 02-3402-7487</span>
-                                <span>개인정보관리책임자 : 신정헌 (lakai_official@naver.com)</span>
-                            </li>
-                            <li>
-                                <span>서울특별시 금천구 가산디지털1로 25 806호,807호(대륭테크노타운 17차)</span>
-                            </li>
-                            <li>
-                                <span>고객 문의 : lakaikoreacs@naver.com</span>
-                            </li>
-                            <li>
-                                <span>업무 제휴 및 비지니스 문의 : lakai_official@naver.com</span>
-                            </li>
-                            <li>
-                                <span>Contact LAKAI for more information</span>
-                            </li>
+                    <div class="guideAndAddre">
+                        <ol class="guide">
+                            <li><a href="#" target="_self">약관보기</a></li>
+                            <li><a href="#" target="_self">개인정보 취급방침</a></li>
                         </ol>
-                    </address>
-                </li>
-                <li>
-                    <ol class="">
-                        <li><img alt="SGI 서울보증" src="img/layout/img01"/></li>
-                        <li><img alt="KSNET" src="img/layout/img03"/></li>
-                        <li><img alt="공정거래위원회" src="img/layout/img04"/></li>
-                    </ol>
-                    <dl>
-                        <dt><img alt="우리은행 에스크로" src="img/layout/img02.jpg"/></dt>
-                        <dd>고객님은 현금 등으로 10만원 이상 결제시,<br/>우리은행 구매안전 서비스를 이용하실 수 있습니다.</dd>
-                    </dl>
+                        <address>
+                            <ol>
+                                <li>
+                                    <span>법인명(상호) : 주식회사 라카이코리아</span>
+                                    <span>대표자(성명) : 신정헌</span>
+                                    <span>사업자 등록번호 안내 : 720-81-00985</span>
+                                </li>
+                                <li>
+                                    <span>통신판매업 신고 : 제 2019-서울금천-0636 호 [사업자정보확인]</span>
+                                </li>
+                                <li>
+                                    <span>전화 : 1577-6913</span>
+                                    <span>팩스 : 02-3402-7487</span>
+                                    <span>개인정보관리책임자 : 신정헌 (lakai_official@naver.com)</span>
+                                </li>
+                                <li>
+                                    <span>서울특별시 금천구 가산디지털1로 25 806호,807호(대륭테크노타운 17차)</span>
+                                </li>
+                                <li>
+                                    <span>고객 문의 : lakaikoreacs@naver.com</span>
+                                </li>
+                                <li>
+                                    <span>업무 제휴 및 비지니스 문의 : lakai_official@naver.com</span>
+                                </li>
+                                <li>
+                                    <span>Contact LAKAI for more information</span>
+                                </li>
+                            </ol>
+                        </address>
+                    </div>
+                    <div class="techLogoArea">
+                        <ol class="techLogo">
+                            <li><img alt="SGI 서울보증" src="img/layout/img01"/></li>
+                            <li><img alt="KSNET" src="img/layout/img03"/></li>
+                            <li><img alt="공정거래위원회" src="img/layout/img04"/></li>
+                        </ol>
+                        <dl>
+                            <dt><img alt="우리은행 에스크로" src="img/layout/img02.jpg"/></dt>
+                            <dd>고객님은 현금 등으로 10만원 이상 결제시,<br/>우리은행 구매안전 서비스를 이용하실 수 있습니다.</dd>
+                        </dl>
+                    </div>
                 </li>
             </ul>
         </footer>
@@ -293,6 +311,14 @@
         $('.mainMenu nav .subMenu').on('mouseover', function(){
             $('.mainMenu nav>ul>li>a').removeClass('on');
             $(this).siblings().addClass('on');
+        })
+        //
+        $('#coin-slider').coinslider({
+            width:562,
+            height:468,
+            sDelay:20,
+            navigation:true,
+            delay:3000
         })
     </script>
 </html>

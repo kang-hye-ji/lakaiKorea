@@ -11,9 +11,8 @@ body{
     width:100%; overflow-x:hidden;
 }
 .container{
-    padding-top:105px; max-width:1200px; margin:0 auto; width:100%;
+    padding-top:105px;/*  max-width:1200px; */ margin:0 auto; width:100%;
 }
-
 .visualSl{
     width:100%; height:500px; position:relative; z-index:80;
 }
@@ -33,4 +32,102 @@ body{
 }
 .visualSl .slick-dots{
     display:block; position:absolute; top:0; left:0; z-index:90;
+}
+
+.upcycle{
+    width:100%; height:500px;
+    background:url('../img/main/upcycleBg2.jpg') no-repeat;
+    background-position: center;
+    background-size:auto 100%;
+}
+.upcycle .upcycleWrap{
+    max-width:1200px; margin:0 auto; padding:140px 0 0 100px; position:relative;
+}
+.upcycle .upcycleWrap h2{
+    font-size:50px; color:#000;
+}
+.upcycle .upcycleWrap h3{
+    margin-top:17px;
+    font-size:17px; color:#000; line-height:20px; font-weight:500;
+}
+.upcycle .upcycleWrap p{
+    margin-top:50px;
+    font-size:12px; color:#222; line-height:20px; font-weight:600;
+}
+.upcycle .upcycleWrap a{
+    width:222px; height:60px; display:block; position:absolute; bottom:-58px; right:445px;
+    text-decoration:none; color:#000; text-align:center; font-size:20px; letter-spacing: 5px;
+    background:rgba(184,4,13,0.4); line-height:60px;
+}
+.upcycle .upcycleWrap a:hover{
+    background:rgba(184,4,13,1);
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.upcycle .upcycleWrap a:before{
+    content:'READ MORE'; position:absolute; display:block; width:100%; height:100%; line-height:60px; bottom:9px; right:9px;
+    border:1px solid #000; color:000;
+}
+.upcycle .upcycleWrap a:hover:before{
+    font-weight:500; border:2px solid #000;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+}
+40% {
+    opacity: 0.6;
+}
+100% {
+    opacity: 1;
+}
+}
+
+.customize{
+    width:calc(100% - 50px); height:640px; position:relative; padding:80px 0 0 50px;
+}
+.customize .customizeBg{
+    height:100%; position:absolute; top:0; left:50%; z-index:1;
+    transform:translate(-50%, 0%); -webkit-transform:translate(-50%, 0%); -ms-transform:translate(-50%, 0%);
+}
+.customize>.customizeBg>img{
+    width:auto; height:100%;
+}
+.customize .customizeContWrap{
+    max-width:1200px; margin:0 auto;
+}
+.customize .customText{
+    color:#fff; z-index:2; position:relative;
+}
+.customize .customText h2{
+    font-size:43px; text-shadow:2px 2px 2px rgba(0,0,0,0.4); letter-spacing: -1px;
+}
+.customize .customText p{
+    margin-top:14px;
+    font-size:20px; text-shadow:2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.customize #coin-slider{
+    position:relative; z-index:2; width:562px; height:468px; margin-top:28px;
+}
+.customize #cs-prev-coin-slider,
+.customize #cs-next-coin-slider{
+    display:none;
+}
+.customize #cs-buttons-coin-slider.cs-buttons{
+    left:535px !important; bottom:-10px !important; z-index:2;
+}
+
+.customize .cs-buttons a{
+    border:1px solid #3c4447;
+}
+.customize .cs-buttons a:hover{
+    border:1px solid #d23c48;
+    background-color:#d23c48 !important;
+}
+.customize .cs-active{
+    border:1px solid #3c4447 !important;
+    background-color:#3c4447 !important;
 }

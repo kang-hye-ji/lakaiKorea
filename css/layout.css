@@ -71,11 +71,11 @@ header .topMenu .infoMenu .searchView form:after{
     clear:both; content:''; display:table;
 }
 header .topMenu .infoMenu .searchView form .searchBar{
-    position:relative; float:left;
+    position:relative; float:left; background:rgba(255,255,255,0.8);
 }
 header .topMenu .infoMenu .searchView form .searchBar>input{
     width:510px; height:50px; padding:0 45px 0 11px;
-    font-size:19px; color:#333; background:transparent; border:none; border-bottom:3px solid #000;
+    font-size:19px; color:#111; font-weight:600; background:transparent; border:none; border-bottom:3px solid #000;
 }
 header .topMenu .infoMenu .searchView form .searchBar>button{
     position:absolute; right:5px; top:9px; display:block; width:30px; height:30px;
@@ -241,4 +241,91 @@ header .mainMenu .sns>li{
 
 footer{
     width:100%;
+    /* background:rgba(60,68,71,0.5); */
+    background:rgba(60,68,71,1);
+}
+footer>.footerInner{
+    max-width:1200px; margin:0 auto; *zoom:1; padding:30px 10px;
+}
+footer>.footerInner:after{
+    display:table; clear:both; content:'';
+}
+footer>.footerInner>li:first-child{
+    float:left; width:30%;
+}
+footer>.footerInner>li:first-child>ol{
+    margin-top:25px;
+}
+footer>.footerInner>li:first-child>ol>li{
+    padding-bottom:8px;
+    font-size:15px; color:#cfcfcf;
+}
+
+footer>.footerInner>li:nth-child(2){
+    float:right; width:70%;
+}
+footer>.footerInner>li:nth-child(2) .guide{
+    *zoom:1;
+}
+footer>.footerInner>li:nth-child(2) .guide:after{
+    clear:both; display:table; content:'';
+}
+footer>.footerInner>li:nth-child(2) .guide>li{
+    float:left; position:relative;
+}
+footer>.footerInner>li:nth-child(2) .guide>li:first-child{
+    position:relative; margin-right:18px;
+}
+footer>.footerInner>li:nth-child(2) .guide>li:first-child::after{
+    content:''; display:block; position:absolute; top:0; right:-11px; height:100%; width:2px;
+    background:#cfcfcf;
+}
+footer>.footerInner>li:nth-child(2) .guide>li>a{
+    text-decoration:none; color:#cfcfcf; font-size:14px; line-height:15px;
+}
+footer>.footerInner>li:nth-child(2) .guide>li>a:hover{
+    font-weight:600;
+}
+footer>.footerInner>li:nth-child(2) address{
+    font-style:normal;
+}
+footer>.footerInner>li:nth-child(2) address ol{
+    margin-top:13px;
+}
+footer>.footerInner>li:nth-child(2) address ol>li{
+    margin-bottom:4px;
+}
+footer>.footerInner>li:nth-child(2) address ol>li>span{
+    display:inline-block; margin-right:12px; position: relative;
+    font-size:11px; color:#cfcfcf;
+}
+footer>.footerInner>li:nth-child(2) address ol>li>span:after{
+    display:inline-block; content:''; width:1px; height:100%; position: absolute; top:0; right:-9px;
+    background:#cfcfcf; 
+}
+footer>.footerInner>li:nth-child(2) address ol>li>span:last-child:after{
+    display:none;
+}
+footer>.footerInner>li:nth-child(2) address ol>li:last-child{
+    font-weight:600;
+}
+
+footer>.footerInner>li:nth-child(2) .techLogoArea{
+    *zoom:1; margin-top:10px;
+}
+footer>.footerInner>li:nth-child(2) .techLogoArea:after{
+    clear:both; content:''; display:table;
+}
+footer>.footerInner>li:nth-child(2) .techLogoArea .techLogo{
+    float:left; margin-right:30px;
+}
+footer>.footerInner>li:nth-child(2) .techLogoArea .techLogo>li{
+    margin-bottom:10px;
+}
+footer>.footerInner>li:nth-child(2) .techLogoArea dl{
+    float:left;
+}
+footer>.footerInner>li:nth-child(2) .techLogoArea dl>dd{
+    margin-top:10px;
+    font-size:13px; line-height:17px; font-style: italic; color:#cfcfcf;
 }
